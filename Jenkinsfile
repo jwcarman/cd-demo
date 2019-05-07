@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3.6.1'
-            args '-v $HOME/.m2:/root/.m2 -v /etc/passwd:/etc/passwd'
+            args '-v /etc/passwd:/etc/passwd'
         }
     }
     stages {
