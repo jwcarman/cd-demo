@@ -2,10 +2,14 @@ pipeline {
     agent {
         docker {
             image 'maven:3.6.1'
-            args '-v /etc/passwd:/etc/passwd'
         }
     }
     stages {
+        stage('Identify') {
+            steps {
+                sh 'id'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'mvn -B clean install'
