@@ -6,15 +6,12 @@
 
     <groupId>cd-demo</groupId>
     <artifactId>cd-demo</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-    <name>cd-demo</name>
+    <version>1.0.0-SNAPSHOT</version>
 
     <scm>
-        <url>https://github.com/jaxxy-rs/jaxxy</url>
-        <connection>scm:git:git@github.com:jaxxy-rs/jaxxy.git</connection>
-        <developerConnection>scm:git:git@github.com:jaxxy-rs/jaxxy.git</developerConnection>
-        <tag>jaxxy-0.3.0</tag>
+        <url>https://github.com/jwcarman/cd-demo</url>
+        <connection>scm:git:git@github.com:jwcarman/cd-demo.git</connection>
+        <developerConnection>scm:git:git@github.com:jwcarman/cd-demo.git</developerConnection>
     </scm>
 
     <distributionManagement>
