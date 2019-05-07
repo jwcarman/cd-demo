@@ -3,6 +3,7 @@ pipeline {
         docker {
             image 'maven:3.6.1'
             args '-v $HOME/.m2:/root/.m2'
+            inside '-v /etc/passwd:/etc/passwd'
         }
     }
     stages {
