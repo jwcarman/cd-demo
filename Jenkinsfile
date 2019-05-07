@@ -6,9 +6,9 @@ pipeline {
         }
     }
     stages {
-        stage('Identify') {
+        stage('GitHub Key') {
             steps {
-                sh 'id'
+                sh 'ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts'
             }
         }
         stage('Build') {
