@@ -10,5 +10,10 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+        stage('Release') {
+            steps {
+                sh 'mvn release:prepare release:perform'
+            }
+        }
     }
 }
