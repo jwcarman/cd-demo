@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'cloudbees/java-build-tools'
+            image 'maven:3.6.1'
         }
     }
     stages {
