@@ -7,7 +7,10 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -B clean install'
+                withSonarQubeEnv('Sonar') {
+                    sh 'mvn -B clean install sonar:sonar'
+                }
+
             }
         }
         stage('Release') {
