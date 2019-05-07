@@ -9,10 +9,9 @@
 
     <scm>
         <url>https://github.com/jwcarman/cd-demo</url>
-        <connection>scm:git:https://github.com/jwcarman/cd-demo.git</connection>
-        <developerConnection>scm:git:https://github.com/jwcarman/cd-demo.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+        <connection>scm:git:git@github.com:jwcarman/cd-demo.git</connection>
+        <developerConnection>scm:git:git@github.com:jwcarman/cd-demo.git</developerConnection>
+    </scm>
 
     <distributionManagement>
         <snapshotRepository>
