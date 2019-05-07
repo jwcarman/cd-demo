@@ -8,7 +8,9 @@ pipeline {
     stages {
         stage('GitHub Key') {
             steps {
-                sh 'ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts'
+                sshagent(['jenkins']) {
+                    sh "ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts"
+                }
             }
         }
         stage('Build') {
