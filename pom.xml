@@ -114,6 +114,19 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <forkMode>once</forkMode>
+                    <systemPropertyVariables>
+                        <pactbroker.host>cengage.pact.dius.com.au</pactbroker.host>
+                        <pactbroker.port>443</pactbroker.port>
+                        <pactbroker.tags>latest</pactbroker.tags>
+                        <pactbroker.protocol>https</pactbroker.protocol>
+                        <pactbroker.consumers />
+                        <pactbroker.auth.scheme>basic</pactbroker.auth.scheme>
+                        <pactbroker.auth.username>85dCxvRzLsIY8GjQGW8QG5UUZXXMca</pactbroker.auth.username>
+                        <pactbroker.auth.password>HiIP6Stkc0x2qsdi6zpsisbSmkwr4LsR</pactbroker.auth.password>
+                        <pact.verifier.publishResults>false</pact.verifier.publishResults>
+                        <pact.provider.version>2.5.18-SNAPSHOT</pact.provider.version>
+                        <pact.rootDir>/Users/jcarman/IdeaProjects/helloworld/app/target/pacts</pact.rootDir>
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
             <plugin>
