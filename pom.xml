@@ -116,10 +116,10 @@
                 <configuration>
 <!--                    <arguments>-Dmaven.test.skip=true</arguments>-->
                     <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <useReleaseProfile>false</useReleaseProfile>
+<!--                    <useReleaseProfile>false</useReleaseProfile>-->
                     <releaseProfiles>release</releaseProfiles>
-                    <preparationGoals>test-compile</preparationGoals>
-                    <goals>deploy</goals>
+<!--                    <preparationGoals>test-compile</preparationGoals>-->
+<!--                    <goals>deploy</goals>-->
                 </configuration>
             </plugin>
         </plugins>
