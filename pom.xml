@@ -5,13 +5,13 @@
 
     <groupId>cd-demo</groupId>
     <artifactId>cd-demo</artifactId>
-    <version>1.0.10-SNAPSHOT</version>
+    <version>1.0.10</version>
 
     <scm>
         <url>https://github.com/jwcarman/cd-demo</url>
         <connection>scm:git:https://github.com/jwcarman/cd-demo.git</connection>
         <developerConnection>scm:git:https://github.com/jwcarman/cd-demo.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>cd-demo-1.0.10</tag>
   </scm>
 
     <distributionManagement>
