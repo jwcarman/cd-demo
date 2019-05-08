@@ -118,7 +118,7 @@
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <useReleaseProfile>false</useReleaseProfile>
                     <releaseProfiles>release</releaseProfiles>
-                    <preparationGoals>testCompile</preparationGoals>
+                    <preparationGoals>test-compile</preparationGoals>
                     <goals>deploy</goals>
                 </configuration>
             </plugin>
