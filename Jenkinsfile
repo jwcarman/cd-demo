@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3.6.1'
-            args '-v maven-repo:/.m2'
+            args '-v maven-repo:/root/.m2'
         }
     }
     stages {
@@ -16,11 +16,6 @@ pipeline {
                 configFileProvider([configFile(fileId: 'maven-settings', variable: 'M2_SETTINGS')]) {
                     sh "mvn -B -s ${M2_SETTINGS} clean deploy"
                 }
-            }
-        }
-        stage('Repository') {
-            steps {
-                sh "ls -al /.m2/repository"
             }
         }
         stage('Sonar') {
