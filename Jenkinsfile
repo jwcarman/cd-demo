@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'maven:3.6.1'
-            args '-v maven-repo:/root/.m2'
+            args '-v maven-repo:/.m2'
         }
     }
     stages {
@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Repository') {
             steps {
-                sh "ls -al /root/.m2/repository"
+                sh "ls -al /.m2/repository"
             }
         }
         stage('Sonar') {
