@@ -6,6 +6,11 @@ pipeline {
         }
     }
     stages {
+        stage('Environment') {
+            steps {
+                sh "env"
+            }
+        }
         stage('Build') {
             steps {
                 configFileProvider([configFile(fileId: 'maven-settings', variable: 'M2_SETTINGS')]) {
