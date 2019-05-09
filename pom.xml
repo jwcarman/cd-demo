@@ -127,6 +127,7 @@
                     <!--                    <goals>deploy</goals>-->
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
     <profiles>
