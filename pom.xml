@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cd-demo</groupId>
     <artifactId>cd-demo</artifactId>
     <version>1.0.17-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
+    <modules>
+        <module>module1</module>
+        <module>module2</module>
+    </modules>
     <scm>
         <url>https://github.com/jwcarman/cd-demo</url>
         <connection>scm:git:https://github.com/jwcarman/cd-demo.git</connection>
         <developerConnection>scm:git:https://github.com/jwcarman/cd-demo.git</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <distributionManagement>
         <snapshotRepository>
@@ -111,34 +117,15 @@
         </pluginManagement>
         <plugins>
             <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <forkMode>once</forkMode>
-                    <systemPropertyVariables>
-                        <pactbroker.host>cengage.pact.dius.com.au</pactbroker.host>
-                        <pactbroker.port>443</pactbroker.port>
-                        <pactbroker.tags>latest</pactbroker.tags>
-                        <pactbroker.protocol>https</pactbroker.protocol>
-                        <pactbroker.consumers />
-                        <pactbroker.auth.scheme>basic</pactbroker.auth.scheme>
-                        <pactbroker.auth.username>85dCxvRzLsIY8GjQGW8QG5UUZXXMca</pactbroker.auth.username>
-                        <pactbroker.auth.password>HiIP6Stkc0x2qsdi6zpsisbSmkwr4LsR</pactbroker.auth.password>
-                        <pact.verifier.publishResults>false</pact.verifier.publishResults>
-                        <pact.provider.version>2.5.18-SNAPSHOT</pact.provider.version>
-                        <pact.rootDir>/Users/jcarman/IdeaProjects/helloworld/app/target/pacts</pact.rootDir>
-                    </systemPropertyVariables>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <configuration>
-<!--                    <arguments>-Dmaven.test.skip=true</arguments>-->
+                    <!--                    <arguments>-Dmaven.test.skip=true</arguments>-->
                     <autoVersionSubmodules>true</autoVersionSubmodules>
-<!--                    <useReleaseProfile>false</useReleaseProfile>-->
+                    <!--                    <useReleaseProfile>false</useReleaseProfile>-->
                     <releaseProfiles>release</releaseProfiles>
-<!--                    <preparationGoals>test-compile</preparationGoals>-->
-<!--                    <goals>deploy</goals>-->
+                    <!--                    <preparationGoals>test-compile</preparationGoals>-->
+                    <!--                    <goals>deploy</goals>-->
                 </configuration>
             </plugin>
         </plugins>
