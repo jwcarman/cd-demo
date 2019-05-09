@@ -18,6 +18,11 @@ pipeline {
                 }
             }
         }
+        stage('Repository') {
+            steps {
+                sh "ls -al /root/.m2/repository"
+            }
+        }
         stage('Sonar') {
             steps {
                 withSonarQubeEnv('Sonar') {
