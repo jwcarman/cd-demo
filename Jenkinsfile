@@ -19,8 +19,10 @@ pipeline {
         }
         stage('Sonar') {
             steps {
-                withSonarQubeEnv('Sonar') {
-                    sh 'mvn -B -s ${M2_SETTINGS} sonar:sonar'
+                configFileProvider([configFile(fileId: 'maven-settings', variable: 'M2_SETTINGS')]) {
+                    withSonarQubeEnv('Sonar') {
+                        sh 'mvn -B -s ${M2_SETTINGS} sonar:sonar'
+                    }
                 }
             }
         }
