@@ -6,7 +6,7 @@
     <parent>
         <groupId>cd-demo</groupId>
         <artifactId>cd-demo</artifactId>
-        <version>1.0.35-SNAPSHOT</version>
+        <version>1.0.35</version>
     </parent>
 
     <artifactId>module1</artifactId>
