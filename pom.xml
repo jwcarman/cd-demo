@@ -5,7 +5,7 @@
 
     <groupId>cd-demo</groupId>
     <artifactId>cd-demo</artifactId>
-    <version>1.0.33</version>
+    <version>1.0.34-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
